@@ -1,0 +1,188 @@
+<html>
+<head>
+    <link rel='stylesheet' type='text/css' href='./style/style.min.css'>
+    <meta charset="utf-8">
+    <meta http-equiv="default-style" content="default stylesheet title" />
+    <!-- Defines a time interval in seconds for the document to refresh itself -->
+    <meta http-equiv="refresh" content="300" />
+    <!-- Specify a legacy document mode that Internet Explorer should use to display a webpage -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Alternative form of setting the charset attribute. A document must not contain both a meta element with an http-equiv attribute in the encoding declaration state and a meta element with the charset attribute present. -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Control the behavior of search engine crawling and indexing. -->
+    <meta name="http-equiv" content="X-Robots-Tag : noindex, follow" />
+    <!-- The name of the Web application that the page represents -->
+    <meta name="application-name" content="OnePage" />
+    <!-- Name of the author of the document -->
+    <meta name="author" content="21st Century Code"/>
+    <!-- Specifies the software package used to generate the document -->
+    <meta name="generator" content="SomeWebPageGenerator 4.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <script type='application/javascript' src='./script/script.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500|Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title>Wersja demonstacyjna</title>
+</head>
+<body onLoad="setup()">
+  <div class="curtain">
+    <span class='curtainText'>
+      <img src='images/Loading.gif'><br>
+      <span class='curtainLoading'>ŁADOWANIE</span>
+    </span>
+  </div>
+  <div id='wrapper'>
+
+    <span id="start"></span>
+    <article id='navConteiner'>
+      <header id='headerTag'>
+
+        <section id='navLogo'>
+          <img src="./images/logo.png" height="60%">
+        </section>
+        <nav class='navIcon'>
+          <i class='material-icons'>menu</i>
+        </nav>
+
+
+      </header>
+    </article>
+    <nav class='navBar'>
+      <ul class='navLinks'>
+        <a href="#start"><li id='linkStart'><span>Start</span></li></a>
+        <a href="#howItWorks"><li id='linkHow'><span>Jak to działa</span></li></a>
+        <a href="#WhyUs"><li id='linkWhyUs'><span>Dlaczego my</span></li></a>
+        <a href="#team"><li id='linkteam'><span>Nasz zespół</span></li></a>
+        <a href="#contact"><li id='linkcontact'><span>Kontakt</span></li></a>
+      </ul>
+    </nav>
+    <article class='welcomeShow'>
+      <section class='welcome_text'>
+          <h3>Zrealizuj swój pomysł na stronę!</h3>
+          <p>Z naszą pomocą stworzysz swoją wymarzoną stronę, to takie proste!</p>
+          <button class='submit_button'>Napisz Teraz!</button>
+      </section>
+    </article>
+    <article class='Conteiner' id='howItWorks'>
+      <span class='see_more-container'><span class='see_more'> A oto jak wygląda <span class='purple-medium-text'>realizacja zlecenia.</span> <br></span>
+      <span class='arrow'>&#10151;</span></span>
+        <section class='Steps'>
+          <section id='step_1' class='step'><div class='digit'>1</div><span class='digit-description'>Analizujemy <br> potrzeby klienta</span></section>
+
+          <section id='step_2' class='step'><div class='digit'>2</div><span class='digit-description'>Tworzymy <br> projekt graficzny</span></section>
+
+          <section id='step_3' class='step'><div class='digit'>3</div><span class='digit-description'>Przedstawiamy <br> propozycję klientowi</span></section>
+
+          <section id='step_4' class='step'><div class='digit'>4</div><span class='digit-description'>Przystępujemy <br> do pisania strony</span></section>
+        </section>
+        <section class='Steps-description'>
+          <section class='step-description'>
+            <h3>Dlaczego nie przedstawiamy gotowych szablonów?</h3>
+            <span>W ten sposób jesteśmy w stanie stworzyć produkt, który będzie idealnie spełniał wymogi klienta będąc jednocześnie niepowtarzalną stroną dla każdego.</span>
+          </section>
+          <section class='step-description'>
+            <h3>Czy możliowość poprawek wyglądu jest możliwa tylko na etapie projektu graficznego?</h3>
+            <span>Możliwość modyfikowania wyglądu jest dostępna do etapu zaakceptowania projektu.</span>
+          </section>
+        </section>
+
+
+    </article>
+    <article class='Conteiner' id='WhyUs'>
+      <span class='see_more-container'><span class='see_more'> Pewnie zastanawiasz się <span class='purple-medium-text'>dlaczego my?</span> Oto kilka powodów: <br></span>
+      <span class='arrow'>&#10151;</span></span>
+        <section class='Points'>
+          <section class='point'><div class='image'><img src='images/Icons/rocket.png' width='40%'></div><span class='image-description'>Szybka realizacja</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/brush.png' width='40%'></div><span class='image-description'>Nowoczesny wygląd</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/idea.png' width='40%'></div><span class='image-description'>Innowacyjne pomysły</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/responsive.png' width='40%'></div><span class='image-description'>Responsywność stron</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/edit.png' width='40%'></div><span class='image-description'>Możliwość modyfikacji</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/mirror.png' width='40%'></div><span class='image-description'>Zgodność strony z projektem</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/handshake.png' width='40%'></div><span class='image-description'>Przyjemna współpraca</span></section>
+
+          <section class='point'><div class='image'><img src='images/Icons/cash.png' width='40%'></div><span class='image-description'>Przystępne ceny</span></section>
+        </section>
+
+    </article>
+    <article class='Conteiner' id='team'>
+      <span class='see_more-container'><span class='see_more'> Oto nasz młody zespół! <span class='purple-medium-text'>Do waszych usług!</span></span>
+      <span class='arrow'>&#10151;</span></span>
+
+      <section class='team'>
+        <section class='team_card'><section class='person_image'></section><div class='person_description'><h3 class='person_name'>Jarosław Kudzia</h3><span class='person_text'>Occaecat sunt consectetur velit commodo do sunt minim culpa in aute ut culpa reprehenderit sit.</span><span class='person_skills'>HTML - CSS - PHP - JAVASCRIPT<br> MYSQL - JQUERY - SCSS</span></div></section>
+        <section class='team_card'><section class='person_image'></section><div class='person_description'><h3 class='person_name'>Hubert Szymański</h3><span class='person_text'>Id Lorem reprehenderit fugiat adipisicing officia eiusmod excepteur dolor.</span><span class='person_skills'>HTML - CSS - PHP - JAVASCRIPT<br> MYSQL</span></div></section>
+        <section class='team_card'><section class='person_image'></section><div class='person_description'><h3 class='person_name'>Michał Czarnota</h3><span class='person_text'>Commodo cupidatat esse proident ullamco ea elit laboris laboris do consectetur ullamco.</span><span class='person_skills'>HTML - CSS - PHP - JAVASCRIPT<br> MYSQL</span></div></section>
+      </section>
+
+
+    </article>
+    <article class='Conteiner' id='contact'>
+      <span class='see_more-container'><span class='see_more'> Chcesz skorzystać z naszych usług? A może masz pytanie? <span class='purple-medium-text'>Zapraszamy do kontaktu!</span></span>
+      <span class='arrow'>&#10151;</span></span>
+
+      <section class='contact-options'>
+        <section class='contact-form-body'>
+          <h3> Formularz Kontaktowy </h3>
+          <form class='contact-form'>
+            <span class='form-input-info'>IMIĘ I NAZWISKO / FIRMA</span>
+            <input class='form-input' Placeholder='IMIĘ I NAZWISKO / FIRMA' type='text'>
+            <span class='form-input-info'>ADRES EMAIL</span>
+            <input class='form-input' Placeholder='ADRES EMAIL' type='text'>
+            <span class='form-input-info'>TREŚĆ WIADOMOŚCI</span>
+            <textarea class='form-textarea' placeholder="TREŚĆ WIADOMOŚCI"></textarea>
+            <input class='form-submit-button' type='submit' value='WYŚLIJ'>
+          </form>
+        </section>
+        <section class='contact-info'>
+          <h3> Informacje kontaktowe </h3>
+          <span class='contact-info-text'>
+            <i class='material-icons'>location_on</i><br>
+            <span class='info-text-header'>Adres:</span> Ul. Drawska xyz, 79-185, Warsaw;
+          </span>
+          <span class='contact-info-text'>
+            <i class='material-icons'>phone</i><br>
+            <span class='info-text-header'>Telefon:</span> +48 981 241 718 <br>
+            <span class='info-text-header'>Telefon:</span> +48 719 261 814
+          </span>
+          <span class='contact-info-text'>
+            <i class='material-icons'>email</i><br>
+            <span class='info-text-header'>Email:</span> xyz@xyz.pl <br>
+            <span class='info-text-header'>Email:</span> qwer@qwer.pl
+          </span>
+        </section>
+      </section>
+
+
+    </article>
+    <footer id='Foother'>
+      <span class='footer-logo'><img src='images/logo2.png' width="200px"></span>
+      <article class='footer-nav'>
+        <secion class='nav-links'>
+          <ul class='footer-nav-links'>
+            <a href="#start"><li class='footer-nav-link' id='linkStart'><span>Start</span></li></a>
+            <a href="#howItWorks"><li class='footer-nav-link' id='linkHow'><span>Jak to działa</span></li></a>
+            <a href="#WhyUs"><li class='footer-nav-link' id='linkWhyUs'><span>Dlaczego my</span></li></a>
+            <a href="#team"><li class='footer-nav-link' id='linkteam'><span>Nasz zespół</span></li></a>
+            <a href="#contact"><li class='footer-nav-link' id='linkcontact'><span>Kontakt</span></li></a>
+          </ul>
+        </section>
+        <section class='nav-social'>
+          <a href="https://www.facebook.com/21stCenturyCode/"><i class="fab fa-facebook-f fa-fw"></i></a>
+          <a href="https://www.facebook.com/21stCenturyCode/"><i class="fab fa-google-plus-g fa-fw"></i></a>
+          <a href="https://www.facebook.com/21stCenturyCode/"><i class="fab fa-twitter fa-fw"></i></a>
+        </section>
+      </article>
+      <p class='copyrights'>21st Century Code 2018.<br> All Rights Reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
