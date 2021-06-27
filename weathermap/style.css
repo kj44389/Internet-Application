@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+.display_block {
+  display: block;
+}
+.weather_tab {
+  margin: 20px;
+  width: 500px;
+  height: auto;
+  border: 1px solid rgba(193, 193, 193, 1);
+  padding: 20px;
+  color: rgba(61, 61, 61, 1);
+  display: none;
+}
+.weather_tab2 {
+  margin: 20px;
+  width: 500px;
+  height: auto;
+  border: 1px solid rgba(193, 193, 193, 1);
+  padding: 20px;
+  color: rgba(61, 61, 61, 1);
+}
+.date {
+  font-size: 2em;
+  font-family: "Arial";
+  font-weight: 600;
+}
+.below_date {
+  display: flex;
+  font-size: 1.5em;
+  font-family: "Arial";
+}
+.below_date .img {
+}
+.below_date .right {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  width: 70%;
+  height: 200px;
+  padding: 20px;
+}
+.temp {
+  font-size: 3em;
+  font-weight: 600;
+}

@@ -1,0 +1,74 @@
+#table {
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.highlight {
+  background-color: yellow;
+}
+.hidden {
+  display: none !important;
+}
+.task_th_row {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.task_th_mark {
+  width: 10%;
+  height: 100%;
+}
+.task_th_name {
+  width: 40%;
+  height: 100%;
+}
+.task_th_date {
+  width: 40%;
+  height: 100%;
+}
+.task_th_delete {
+  width: 10%;
+  height: 100%;
+}
+.task_row {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.task_mark {
+  width: 10%;
+  height: 100%;
+}
+.task_name {
+  width: 40%;
+  height: 100%;
+}
+.task_date {
+  width: 40%;
+  height: 100%;
+}
+.task_delete {
+  width: 10%;
+  height: 100%;
+}
+.task_add {
+  width: 600px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.task_add_name {
+  width: 45%;
+  height: 100%;
+}
+.task_add_date {
+  width: 45%;
+  height: 100%;
+}
+.task_add_button {
+  width: 10%;
+  height: 100%;
+}

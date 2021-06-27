@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body onLoad="loading()">
+    <input type="text" id="search" onkeyup="findNote()" />
+    <div class="task_th_row">
+      <div class="task_th_mark"></div>
+      <div class="task_th_name"><h2>Nazwa Zadania</h2></div>
+      <div class="task_th_date"><h2>Data Zadania</h2></div>
+      <div class="task_th_delete"></div>
+    </div>
+    <div id="table"></div>
+    <div class="task_add">
+      <div class="task_add_name">
+        <input type="text" id="name_btn" placeholder="Nazwa Zadania:" />
+      </div>
+      <div class="task_add_date"><input type="date" id="date_btn" /></div>
+      <div class="task_add_button">
+        <button onclick="add_task()" id="add_task">Dodaj Zadanie</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kudzia - Weathermap</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+      function Weather() {
+        let handler = document.getElementsByClassName("weather_tab")[0];
+        handler.style.display = "block";
+        let city = document.getElementById("textbox").value;
+        //delete if this isnt a first tap
+        do {
+          var junk = document.getElementsByClassName("weather_tab2");
+          for (let i = 0; i < junk.length; i++) {
+            junk[0].remove();
+          }
+        } while (junk.length != 0);
+        let con = new XMLHttpRequest();
+        con.open(
+          "GET",
+          "https://api.openweathermap.org/data/2.5/weather?q=" +
+            city +
+            "&mode=json&units=metric&lang=pl&appid=7ded80d91f2b280ec979100cc8bbba94",
+          true
+        );
+        con.addEventListener("load", function (event) {
+          let current = JSON.parse(con.responseText);
+          console.log(current);
+          //date
+          let date = new Date(current.dt * 1000);
+          handler.getElementsByClassName(
+            "date"
+          )[0].innerHTML = date.toLocaleString();
+          //temp
+          handler.getElementsByClassName("temp")[0].innerHTML =
+            current.main.temp + " &#8451";
+          //feel_temp
+          handler.getElementsByClassName("feel_temp")[0].innerHTML =
+            "Odczuwalna: " + current.main.feels_like + " &#8451";
+          //description
+          handler.getElementsByClassName("description")[0].innerHTML =
+            current.weather[0].description;
+          //change img
+          handler.getElementsByTagName("img")[0].src =
+            "http://openweathermap.org/img/wn/" +
+            current.weather[0].icon +
+            "@4x.png";
+        });
+        con.send(null);
+        let url =
+          "https://api.openweathermap.org/data/2.5/forecast?q=" +
+          city +
+          "&mode=json&units=metric&lang=pl&appid=7ded80d91f2b280ec979100cc8bbba94";
+        let con2 = fetch(url)
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            console.log(data);
+            for (let i = 0; i < data.list.length; i++) {
+              let new_div = document.createElement("div");
+              //copy current div
+              new_div.className = "weather_tab2";
+              new_div.innerHTML = handler.innerHTML;
+              //date
+              let date = new Date(data.list[i].dt * 1000);
+              new_div.getElementsByClassName(
+                "date"
+              )[0].innerHTML = date.toLocaleString();
+              //temp
+              new_div.getElementsByClassName("temp")[0].innerHTML =
+                data.list[i].main.temp + " &#8451";
+              //feel_tep
+              new_div.getElementsByClassName("feel_temp")[0].innerHTML =
+                "Odczuwalna: " + data.list[i].main.feels_like + " &#8451";
+              //description
+              new_div.getElementsByClassName("description")[0].innerHTML =
+                data.list[i].weather[0].description;
+              //img
+              new_div.getElementsByTagName("img")[0].src =
+                "http://openweathermap.org/img/wn/" +
+                data.list[i].weather[0].icon +
+                "@4x.png";
+              //add div to body
+              handler.parentNode.appendChild(new_div);
+            }
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <div class="searching">
+      <input type="text" id="textbox" value="Szczecin" />
+      <input type="button" onClick="Weather()" id="potwierdz" value="Pogoda" />
+    </div>
+    <div class="weather_tab">
+      <span class="date"></span>
+      <div class="below_date">
+        <img id="current_img" src="#" />
+        <div class="right">
+          <span class="temp"></span>
+          <span class="feel_temp"></span>
+          <span class="description"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
